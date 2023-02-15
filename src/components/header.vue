@@ -40,6 +40,7 @@
 </script>
 
 <style>
+
   header {
     display: flex;
     flex-direction: row;
@@ -148,13 +149,26 @@
     width: 10%;
   }
 
+  header .right .alert img:hover {
+    animation: bounce 0.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+
   header .right .alert span {
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: #6C1182;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     border-radius: 99px;
   }
 

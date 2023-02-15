@@ -25,10 +25,15 @@
     align-items: center;
   }
 
+  div:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.2s;
+  }
+
   div img {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 2vh;
   }
 
   div p {
