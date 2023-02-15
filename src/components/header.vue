@@ -179,4 +179,70 @@
   header .right .account img {
     height: 100%;
   }
+
+  @media screen and (max-width:767.98px) {
+
+    header .left {
+      width: 15%;
+    }
+    
+    header .left .logo p{
+      display: none;
+    }
+
+    header .mid {
+      width: 60%;
+      justify-content: start;
+    }
+
+    header .mid .hi h3{
+      font-size: 12px;
+      width: 100%;
+    }
+
+    header .mid .searchbar{
+      width: 55%;
+    }
+
+    header .mid .searchbar input{
+      width: 100%;
+      font-size: 12px;
+    }
+
+    header .mid .searchbar input::placeholder{
+      font-size: 12px;
+    }
+
+    header .right {
+      width: 20%;
+    }
+
+    header .right .alert {
+      width: 25%;
+    }
+
+    header .right .alert img{
+      width: 100%;
+    }
+
+    header .right .alert span {
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 2px;
+      right: -5px;
+    }
+
+    header .right .account {
+      display: flex;
+      align-items: center;
+    }
+
+    header .right .account img {
+      width: 4vh;
+      height: 4vh;
+    }
+
+  }
+
 </style>

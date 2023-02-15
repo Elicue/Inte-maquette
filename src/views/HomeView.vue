@@ -178,6 +178,15 @@ export default {
     margin-left: 2vh;
   }
 
+  @media screen and (max-width:767.98px) {
+    
+    main .content .left {
+      display: none;
+    }
+
+  }
+
+
   /*-------------------------------LEFT--------------------------------------------*/
   /*-------------------------------MID--------------------------------------------*/
   /*-------------------------------MID-HAUT--------------------------------------------*/
@@ -269,6 +278,34 @@ export default {
     transition: ease-in-out 0.2s;
   }
 
+  @media screen and (max-width:767.98px) {
+    
+    main .content .mid {
+      width: 100%;
+      height: 100%;
+    }
+
+    main .content .mid .haut {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 30%;
+    }
+
+    main .content .mid .haut .left{
+      width: 50%;
+    }
+
+    main .content .mid .haut .right{
+      width: 98%;
+      padding: 0;
+      margin-top: 2vh;
+    }
+
+  }
+
+
   /*-------------------------------MID-HAUT--------------------------------------------*/
   /*-------------------------------MID-MID--------------------------------------------*/
 
@@ -282,6 +319,15 @@ export default {
   main .content .mid .centre img{
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (max-width:767.98px) {
+      
+    main .content .mid .centre {
+      display: flex;
+      width: 100%;
+      height: 35%;
+    }
   }
 
   /*-------------------------------MID-MID--------------------------------------------*/
@@ -326,6 +372,41 @@ export default {
     color: #D61919;
   }
 
+  @media screen and (max-width:767.98px) {
+      
+    main .content .mid .bottom {
+      display: flex;
+      width: 100%;
+      height: 35%;
+      flex-direction: column;
+      margin: auto;
+      margin-top: 3vh;
+    }
+
+    main .content .mid .bottom .haut {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    main .content .mid .bottom .bottom{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    main .content .mid .bottom .bottom .parent:nth-child(2){
+      margin-top: 2vh;
+    }
+  }
+
   /*-------------------------------MID-BOTTOM--------------------------------------------*/
   /*-------------------------------MID--------------------------------------------*/
   /*-------------------------------RIGHT--------------------------------------------*/
@@ -338,6 +419,15 @@ export default {
       flex-direction: column;
       justify-content: space-between;
     }
+
+    @media screen and (max-width:767.98px) {
+      
+      main .content .right {
+        display: none;
+      }
+
+    }
+
 
   /*-------------------------------RIGHT-HAUT--------------------------------------------*/
 
