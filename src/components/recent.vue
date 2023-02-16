@@ -88,5 +88,18 @@
     opacity: 70%;
     color: white;
   }
+
+  @media screen and (max-width:767.98px) {
+
+  div {
+    width: 100%;
+  }
+
+  div .content .others{
+    width: 50%;
+  }
+
+  }
+
     
 </style>

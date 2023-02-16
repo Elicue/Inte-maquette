@@ -48,6 +48,7 @@
     width: 100%;
     height: 10vh;
     align-items: center;
+    z-index: 99;
   }
 
   header .content {

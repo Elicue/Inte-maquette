@@ -147,14 +147,12 @@
       height: 100%;
       padding: 2vh 0;
     }
-
     .parent .first {
       width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
     }
-
     .parent .second {
       width: 80%;
       display: flex;

@@ -54,18 +54,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .parent .content .haut .logo img{
-    width: 6vh;
-    height: 6vh;
+    width: 5vh;
+    height: 5vh;
   }
 
   .parent .content .bas {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 22px;
+    font-size: 20px;
   }
+
+  @media screen and (max-width:767.98px) {
+
+    .parent {
+      padding: 10px 0 20px 0;
+    }
+
+    .parent .content .bas {
+      font-size: 15px;
+    }
+}
+
 </style>

@@ -1,8 +1,10 @@
 <template>
   <Header/>
+  <div class="douille"></div>
+  <div class="douille2"></div>
   <main>
     <div class="content">
-      <div class="left">
+      <div class="left menu">
         <div class="haut">
           <div class="dashboard">
             <div class="bg">
@@ -54,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="right">
+      <div class="right profil">
         <div class="top">
           <h3>Recent Transactions </h3>
           <recent logo="img/usdt.svg" titre="Usdt" sousTitre="Received" money="+$3,546" date="Today, 13:45 pm"/>
@@ -83,17 +85,43 @@ import recent from '@/components/recent.vue'
 
 export default {
   name: 'HomeView',
+
   components: {
     Header,
     listElement,
     transaction,
     assets,
     recent
-  }
+  },
+
+  mounted() {
+    let menu = document.querySelector('.menu')
+    let profil = document.querySelector('.profil')
+    //quand on appuit sur le logo, on fait apparaitre le menu left
+    document.querySelector('.douille').addEventListener('click', () => {
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+      console.log('click')
+    }),
+
+    document.querySelector('.douille2').addEventListener('click', () => {
+      if (profil.style.display === "none") {
+        profil.style.display = "block";
+      } else {
+        profil.style.display = "none";
+      }
+      console.log('click')
+    })
+  },
 }
+
 </script>
 
 <style>
+
   * {
     margin: 0;
     padding: 0;
@@ -102,8 +130,28 @@ export default {
     text-decoration: none;
   }
 
+  .douille {
+    width: 10vh;
+    height: 4vh;
+    position: absolute;
+    background: transparent;
+    z-index: 80;
+    top: 3vh;
+  }
+
+  .douille2 {
+    width: 4vh;
+    height: 4vh;
+    position: absolute;
+    background: transparent;
+    z-index: 80;
+    top: 3vh;
+    right: 2vh;
+  }
+
   body {
     background-color: black;
+    position: relative;
   }
 
   main {
@@ -180,12 +228,16 @@ export default {
 
   @media screen and (max-width:767.98px) {
     
-    main .content .left {
+    main .content .menu {
+      position: absolute;
+      display: flex;
       display: none;
+      background-color: black;
+      z-index: 9;
+      width: 100%;
     }
 
   }
-
 
   /*-------------------------------LEFT--------------------------------------------*/
   /*-------------------------------MID--------------------------------------------*/
@@ -422,12 +474,16 @@ export default {
 
     @media screen and (max-width:767.98px) {
       
-      main .content .right {
-        display: none;
+      main .content .profil {
+      position: absolute;
+      display: flex;
+      display: none;
+      background-color: black;
+      z-index: 10;
+      width: 95%;
+      height: 100%;
       }
-
     }
-
 
   /*-------------------------------RIGHT-HAUT--------------------------------------------*/
 
@@ -447,6 +503,14 @@ export default {
 
     main .content .right .top .up:nth-child(4) .others  p:nth-child(1){
       color: #D61919;
+    }
+
+    @media screen and (max-width:767.98px) {
+
+      main .content .right .top {
+        width: 100%;
+      }
+
     }
   
   /*-------------------------------RIGHT-HAUT--------------------------------------------*/
@@ -471,6 +535,19 @@ export default {
       color: black;
     }
 
+    @media screen and (max-width:767.98px) {
+
+      main .content .right .bottom {
+        margin-top: 10vh;
+        width: 95%;
+      }
+
+      main .content .right .bottom .parent:nth-child(3){
+        margin-top: 2vh;
+      }
+
+
+    }
   /*-------------------------------RIGHT-BOTTOM--------------------------------------------*/
   /*-------------------------------RIGHT--------------------------------------------*/
 
