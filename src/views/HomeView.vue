@@ -43,7 +43,8 @@
           </div>
         </div>
         <div class="centre">
-          <img src="img/graph.png" alt="graph">
+          <!-- <img src="img/graph.png" alt="graph"> -->
+          <canvas id="graph"></canvas>
         </div>
         <div class="bottom">
           <div class="haut">
@@ -82,6 +83,7 @@ import transaction from '@/components/transaction.vue'
 import assets from '@/components/assets.vue'
 import recent from '@/components/recent.vue'
 
+import Chart from 'chart.js'
 
 export default {
   name: 'HomeView',
@@ -95,6 +97,48 @@ export default {
   },
 
   mounted() {
+
+    let ctx = document.getElementById('graph').getContext('2d');
+
+    new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [
+            '5Nov',
+            '6Nov',
+            '7Nov',
+            '8Nov',
+            '9Nov',
+            '10Nov',
+            '11Nov',
+            '12Nov',
+            '13Nov',
+            '14Nov',
+            '15Nov',
+        ],
+        datasets: [
+            {
+        label: 'ETH',
+                data: [null, null, null, null, 100, 400, 400, 200, 400, 300, 500],
+                borderColor: 'rgba(25, 112, 214, 1)',
+        backgroundColor: 'transparent',
+            },
+            {
+        label: 'BTC',
+                data: [null, 200, 500, 700, 500, 400, 600, 500, 700, 400, null],
+                borderColor: 'rgba(89, 39, 149, 1)',
+        backgroundColor: 'transparent',
+            },
+            {
+        label: 'LTC',
+                data: [100, 600, 200, 100, 300, 200, 300, 700, 400, 100, 400],
+                borderColor: 'rgba(77, 145, 165, 1)',
+        backgroundColor: 'transparent',
+            },
+        ],
+    },
+})
+
     let menu = document.querySelector('.menu')
     let profil = document.querySelector('.profil')
     //quand on appuit sur le logo, on fait apparaitre le menu left
@@ -146,7 +190,7 @@ export default {
     background: transparent;
     z-index: 80;
     top: 3vh;
-    right: 2vh;
+    right: 5vh;
   }
 
   body {

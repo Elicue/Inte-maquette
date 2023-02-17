@@ -152,8 +152,8 @@
   }
 
   header .right .alert img {
-    width: 4vh;
-    height: 4vh;
+    width: 3vh;
+    height: 3vh;
   }
 
   header .right .alert img:hover {
@@ -184,7 +184,7 @@
   }
 
   header .right .account img {
-    height: 100%;
+    height: 80%;
   }
 
   @media screen and (max-width:767.98px) {
