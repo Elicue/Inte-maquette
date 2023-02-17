@@ -225,6 +225,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 18%;
+    height: 100%;
     justify-content: space-between;
     padding-top: 8vh;
   }
