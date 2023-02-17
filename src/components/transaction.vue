@@ -70,7 +70,7 @@
     flex-direction: row;
     align-items: center;
   }
-
+  
   .blanc {
     color: white;
   }

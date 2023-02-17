@@ -192,6 +192,7 @@ export default {
     flex-direction: row;
     width: 100%;
     height: 15%;
+    font-size: 20px;
   }
 
   main .content .left .haut .dashboard .bg {
@@ -205,8 +206,8 @@ export default {
   }
 
   main .content .left .haut .dashboard .bg img{
-    width: 30px;
-    height: 30px;
+    width: 4vh;
+    height: 4vh;
   }
 
   main .content .left .haut .dashboard .bg p{
@@ -220,6 +221,11 @@ export default {
     height: 70%;
     justify-content: space-between;
     margin-left: 2vh;
+  }
+
+  main .content .left .haut .list img{
+    width: 4vh;
+    height: 4vh;
   }
 
   main .content .left .logout {
@@ -255,14 +261,15 @@ export default {
     display: flex;
     flex-direction: row;
     height: 13%;
-    width: 80%;
+    width: 90%;
     align-items: center;
+    justify-content: space-between;
   }
 
   main .content .mid .haut .left {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     padding-top: 0;
     justify-content: left;
   }
@@ -316,7 +323,6 @@ export default {
 
   main .content .mid .haut .right p{
     display: flex;
-    width: 25%;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -324,7 +330,7 @@ export default {
 
   main .content .mid .haut .right p:hover{
     background-color: #0D0C0C;
-    padding: 0.5rem 0.5rem;
+    padding: 0.1rem 1rem;
     border-radius: 7px;
     transform: scaleY(1.1);
     transition: ease-in-out 0.2s;
@@ -353,6 +359,18 @@ export default {
       width: 98%;
       padding: 0;
       margin-top: 2vh;
+    }
+
+    main .content .mid .haut .right p{
+      font-size: 12px;
+    }
+
+    main .content .mid .haut .right p:hover{
+      background-color: #0D0C0C;
+      padding: 0.2rem 1rem;
+      border-radius: 7px;
+      transform: scaleY(1.1);
+      transition: ease-in-out 0.2s;
     }
 
   }

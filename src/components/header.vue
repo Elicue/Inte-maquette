@@ -106,9 +106,10 @@
     flex-direction: row;
     align-items: center;
     background-color: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 10px;
     height: 4vh;
-    width: 50%;
+    width: 48%;
+    margin-left: 5vh;
   }
 
   header .mid .searchbar img{
@@ -150,6 +151,11 @@
     width: 10%;
   }
 
+  header .right .alert img {
+    width: 4vh;
+    height: 4vh;
+  }
+
   header .right .alert img:hover {
     animation: bounce 0.5s ease-in-out infinite alternate;
   }
@@ -165,11 +171,11 @@
 
   header .right .alert span {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 1vh;
+    height: 1vh;
     background-color: #6C1182;
-    top: 10px;
-    right: 10px;
+    top: 3px;
+    right: 3px;
     border-radius: 99px;
   }
 
@@ -203,10 +209,11 @@
 
     header .mid .searchbar{
       width: 55%;
+      margin-left: 0;
     }
 
     header .mid .searchbar input{
-      width: 100%;
+      width: 50%;
       font-size: 12px;
     }
 
