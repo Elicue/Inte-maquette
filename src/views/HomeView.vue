@@ -137,6 +137,11 @@ export default {
             },
         ],
     },
+    options: { 
+      legend: {
+         display: false 
+        },
+    }
 })
 
     let menu = document.querySelector('.menu')
